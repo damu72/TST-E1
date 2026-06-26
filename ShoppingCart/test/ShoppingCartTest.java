@@ -13,6 +13,15 @@ class ShoppingCartTest {
         ShoppingCart cart = new ShoppingCart();
         cart.addItem("Apple", 2.50);
         assertEquals(2.50, cart.getTotal(), 0.001);
+    }
+
+    @Test
+    void testAddMultipleItemsSumsTotal() {
+        ShoppingCart cart = new ShoppingCart();
+        cart.addItem("Apple", 2.00);
+        cart.addItem("Banana", 3.50);
+        assertEquals(5.50, cart.getTotal(), 0.001);
+    }
 }
 
 
