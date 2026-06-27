@@ -32,6 +32,18 @@ class ShoppingCartTest {
         
         assertEquals(2, cart.getQuantity("Apple"));
     }
+
+    @Test
+    void testRemoveItem() {
+        ShoppingCart cart = new ShoppingCart();
+        cart.addItem("Apple", 2.00);
+        cart.addItem("Banana", 3.00);
+        
+        cart.removeItem("Apple");
+        
+        assertEquals(0, cart.getQuantity("Apple"));
+        assertEquals(3.00, cart.getTotal(), 0.001);
+    }
 }
 
 
