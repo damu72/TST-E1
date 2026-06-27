@@ -18,4 +18,14 @@ class ShoppingCart {
                     .mapToDouble(CartItem::price)
                     .sum();
     }
+
+    public int getQuantity(String name) {
+        int count = 0;
+        for (CartItem item : items) {
+            if (item.name().equals(name)) {
+                count++;
+            }
+        }
+        return count;
+    }
 }
