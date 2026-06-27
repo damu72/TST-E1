@@ -28,4 +28,13 @@ class ShoppingCart {
         }
         return count;
     }
+
+    public void removeItem(String name) {
+        for (int i = 0; i < items.size(); i++) {
+            if (items.get(i).name().equals(name)) {
+                items.remove(i);
+                break; 
+            }
+        }
+    }
 }
