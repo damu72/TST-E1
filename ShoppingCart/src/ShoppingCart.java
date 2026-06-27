@@ -13,9 +13,10 @@ class ShoppingCart {
     }
 
     public double getTotal() {
-        if (!items.isEmpty()) {
-            return items.get(0).price(); // Fake it till you make it
+        double total = 0.0;
+        for (CartItem item : items) {
+            total += item.price();
         }
-        return 0.0;
+        return total;
     }
 }
