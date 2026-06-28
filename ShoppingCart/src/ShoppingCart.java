@@ -13,7 +13,6 @@ class ShoppingCart {
     }
 
     public double getTotal() {
-        // Deklarativ und sauber:
         return items.stream()
                     .mapToDouble(CartItem::price)
                     .sum();
@@ -36,5 +35,9 @@ class ShoppingCart {
                 break; 
             }
         }
+    }
+
+    public static void main(String[] args) {
+        System.out.println("ShoppingCart");
     }
 }
